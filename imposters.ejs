@@ -1,0 +1,24 @@
+{
+    "imposters": [
+         {
+            "port": 4545,
+            "protocol": "http",
+            "stubs": [
+                { "predicates": [
+                        {
+                            "matches": {
+                                "path": "/dummy",
+                                "method": "GET"
+                            }
+                        }
+                    ],
+                    "responses": [
+                        { "inject": "<%- stringify(filename, 'dummy-api/dummyApi.js') %>" }
+                    ]
+                }
+             ]
+          }
+      ]
+}
+
+

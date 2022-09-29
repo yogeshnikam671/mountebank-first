@@ -1,0 +1,16 @@
+{
+  "name": "mountebank-first",
+  "version": "1.0.0",
+  "description": "Application to mock API calls",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "scripts": {
+    "start": "mb --port 3000 --allowInjection --pidfile mb.pid --configfile imposters.ejs",
+    "stop": "mb stop --pidfile mb.pid"
+  },
+  "dependencies": {
+    "mountebank": "^2.4.0",
+    "lodash": "^4.17.15"
+  }
+}
